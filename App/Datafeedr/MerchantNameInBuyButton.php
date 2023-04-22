@@ -1,4 +1,8 @@
 <?php
+/**
+ * https://datafeedrapi.helpscoutdocs.com/article/174-add-merchant-name-to-buy-button
+ * 
+ */
 
 namespace App\Datafeedr;
 
@@ -13,7 +17,7 @@ class MerchantNameInBuyButton {
 
   }
 
-  function add_to_cart_text( $value, $attribute, $post, $product, $set, $action ) {
+  function add_to_cart_text( $button_text, $product ) {
 
     if ( $product->get_type() != 'external' ) {
       return $button_text;
